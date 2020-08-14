@@ -1,0 +1,62 @@
+#弹出框配置
+popwin-config:
+  warehouseDefaultStation:
+    title: pop.warehouseDefaultStation.station
+    module-name: upm
+    query-type: CompanyStationQuery
+    value-field: stationCode
+    text-field: stationName
+    columns:
+      - {title: 经营代码, field: stationCode}
+      - {title: 经营名称, field: stationName}
+    conditions:
+      - {title: 经营代码, name: stationCode, operator: =, data-type: String}
+      - {title: 经营名称, name: stationName, operator: =, data-type: String}
+
+  timerUser:
+    module-name: upm
+    query-type: EsUserModel
+    value-field: esusId
+    text-field: esusUserNameCn
+    title: 操作人
+    defaults:
+      - {fieldName: esusIsenable, operator: =, fieldValue: Y}
+
+  ##选择项目
+  userDefaultProject:
+    title: 默认项目
+    query-type: CompanyProjectQuery
+    value-field: ebpjId
+    text-field: ebpjProjectName
+    columns:
+      - {title: 项目代码, field: ebpjProjectCode}
+      - {title: 项目名称, field: ebpjProjectName}
+    conditions:
+      - {title: 项目代码, name: projectCode, operator: =, dataType: String}
+      - { title: 项目名称, name: projectName, operator: =, dataType: String}
+
+    ## 选择基地
+  userDefaultStation:
+    title: 默认经营组织
+    query-type: CompanyStationQuery
+    value-field: jobId
+    text-field: stationName
+    columns:
+      - {title: 经营代码,field: stationCode}
+      - {title: 经营名称, field: stationName}
+    conditions:
+      - {title: 经营代码, name: stationCode, operator: =, dataType: String}
+      - {title: 经营名称,name: stationName, operator: =, dataType: String}
+
+    ## 选择部门
+  userDepartMent:
+    title: 所属部门
+    query-type: CompanyDepartmentQuery
+    value-field: esdeId
+    text-field: esdeDepartmentName
+    columns:
+      - {title: 部门代码, field: esdeDepartmentCode}
+      - {title: 部门名称, field: esdeDepartmentName}
+    conditions:
+      - {title: 部门代码, name: departmentCode, operator: =, dataType: String}
+      - {title: 部门名称, name: departmentName, operator: =, dataType: String}

@@ -1,0 +1,6 @@
+#下拉框
+select-options:
+  sources-map:
+    SYS_PAY_STATUS:
+      - {code : 'NEW', quick-code : 'NEW', name : '新增'}
+      - {code : 'PAY', quick-code : 'PAY', name : '已支付'}

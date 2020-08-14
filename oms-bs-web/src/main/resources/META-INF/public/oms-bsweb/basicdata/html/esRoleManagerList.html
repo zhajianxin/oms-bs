@@ -1,0 +1,91 @@
+<div class="page-content">
+    <div id="toolbar" class="toolbar-cc clearfix p12">
+        <div class="form-inline" role="form" data-spy="affix"
+             data-offset-top="159">
+            <div class="pull-right">
+                <form id="roleGridForm">
+                    <div class="form-group ml5">
+                        <input class="form-control" name="quicklyName"
+                               id="roleList_quicklyQuery" placeholder="快捷查询(代码)">
+                    </div>
+                    <button i18n='esCompanyGrid_html_btn_company_more' id="role_more_btn" type="button" class="btn btn-primary">更多</button>
+                    <div class="form-group ml5">
+                        <a href="#"> <span id="role_refresh_btn"
+                                           class="glyphicon glyphicon-refresh" style="font-size: 20px;"
+                                           title="刷新"></span>
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="table-responsive">
+        <table id="roleTable" class="table-striped">
+        </table>
+    </div>
+</div>
+<div class="modal fade" tabindex="-1" role="dialog" id="roleQueryMoreModalId"
+     aria-labelledby="myModalLabel" aria-hidden="true" data-move="true">
+    <div class="modal-dialog" style="width:800px;height:500px">
+        <div class="modal-content message_align">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"
+                        aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+                <h4 class="modal-title">高级查询</h4>
+            </div>
+            <div class="modal-body">
+                <form name="roleQueryMoreForm" id="roleQueryMoreForm" class="form-horizontal">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <label class="control-label fontred">代码</label>
+                            <input type="text" class="form-control" name="esroRoleCode">
+                        </div>
+                        <div class="col-sm-3">
+                            <label class="control-label fontred">名称</label>
+                            <input type="text" class="form-control" name="esroRoleName">
+                        </div>
+                        <div class="col-sm-3">
+                            <label class="control-label fontred">状态</label>
+                            <select class="sns-combobox select2" type="combox"
+                                    name="esroStatus"
+                                    data-options="cfgKey:'SYS_STATUS'">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <label  class="control-label fontred">是否功能权限</label>
+                            <select class="sns-combobox select2" type="combox"
+                                    name="esroTypeFunction"
+                                    data-options="cfgKey:'SYS_YES_NO'">
+                            </select>
+                        </div>
+                        <div class="col-sm-3">
+                            <label class="control-label fontred">是否数据权限</label>
+                            <select class="sns-combobox select2" type="combox"
+                                    name="esroTypeData"
+                                    data-options="cfgKey:'SYS_YES_NO'">
+                            </select>
+                        </div>
+                        <div class="col-sm-3">
+                            <label class="control-label fontred">是否报表权限</label>
+                            <select class="sns-combobox select2" type="combox"
+                                    name="esroTypeReport"
+                                    data-options="cfgKey:'SYS_YES_NO'">
+                            </select>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button id="roleQueryMoreModal_query" type="button"
+                        class="btn btn-primary">查询</button>
+                <button id="roleQueryMoreModal_reset" type="button"
+                        class="btn btn-primary">重置</button>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,15 @@
+[
+  {
+    "mainmenu": {
+      "text": "基础数据",
+      "class": "menu-icon fa fa-picture-o",
+      "style": ""
+    },
+    "submenu": [
+      {
+        "text": "角色管理",
+        "url": "{template-web}/organize/js/esRoleManagerList"
+      }
+    ]
+  }
+]
